@@ -44,7 +44,8 @@ function getColor(property) {
 }
 
 function polygonStyle(feature) {
-      return {
+      return
+      {
             fillColor: getColor(feature.properties.OBJECTID),
             fillOpacity: 0.5,
             weight: 1,
