@@ -42,3 +42,13 @@ function getColor(property) {
                   return '#ffffff'
       }
 }
+
+function polygonStyle(feature) {
+      return {
+            fillColor: getColor(feature.properties.OBJECTID),
+            fillOpacity: 0.5,
+            weight: 1,
+            opacity: 1,
+            color: 'grey',
+      }
+}
