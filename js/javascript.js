@@ -19,6 +19,7 @@ function popUPinfo(feature, layer) {
 async function addDistrictsGeoJson(url) {
       const response = await fetch(url)
       const data = await response.json()
-      const polygons = L.geoJson(data, {onEachFeature: popUPinfo})
+      const polygons = L.geoJson(data, {onEachFeature: popUPinfo,
+                                       })
       polygons.addTo(map)}
 addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
