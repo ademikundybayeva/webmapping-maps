@@ -54,13 +54,12 @@ function polygonStyle(feature) {
       }
 }
 
-async function addDistrictsGeoJson(url) {
+async function addDistrictsGeoJson(url){
       const response = await fetch(url)
       const data = await response.json()
       const polygons = L.geoJson(data, {
             onEachFeature: popUPinfo,
-            style: polygonStyle,
-      })
+            style: polygonStyle,})
       polygons.addTo(map)
 }
 addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
