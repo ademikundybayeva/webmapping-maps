@@ -12,6 +12,8 @@ async function addGeoJson(url) {
   const data = await response.json()
   const heatData = data.features.map(heatDataConvert)
   console.log(heatData)
+       const heatMap = L.heatLayer(heatData, { radius: 10 })
+       heatMap.addTo(map)
 }
 function heatDataConvert(feature) {
       return [
